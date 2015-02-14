@@ -1169,7 +1169,7 @@ body {
 .enlrg{
     font-size: 24px;
 }
-div ul li:hover{
+.nav li:hover{
       background:#2B4C7E;
       
   }
