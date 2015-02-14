@@ -1255,7 +1255,11 @@ footer div.container div.row div.col-md-4{
         margin-left: auto;
         margin-right: auto;
     }
+    .enlrg{
+    font-size: 14px;
 }
+}
+
 
 nav.navbar{
   opacity:"0.0";}
