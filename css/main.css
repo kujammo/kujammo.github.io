@@ -629,7 +629,7 @@ section h3.section-subheading {
 .service-heading {
     margin: 15px 0;
     text-transform: none;
-    color: #DCE0E6;
+    color: #ffffff;
 }
 
 #portfolio .portfolio-item {
@@ -1169,6 +1169,10 @@ body {
 .enlrg{
     font-size: 24px;
 }
+div ul li:hover{
+      background:#2B4C7E;
+      
+  }
 .white{
     color:white;
 }
