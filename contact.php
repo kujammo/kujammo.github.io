@@ -81,7 +81,7 @@
                         <a class="page-scroll" href="ourteam.html">Our Team</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="contact.html">Contact</a>
+                        <a class="page-scroll" href="contact.php">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -132,6 +132,78 @@
                     </div>
             </div>
         </div>
+    <?php
+// define variables and set to empty values
+$nameErr = $emailErr = $genderErr = $websiteErr = "";
+$name = $email = $comment = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+   if (empty($_POST["name"])) {
+     $nameErr = "Name is required";
+   } else {
+     $name = test_input($_POST["name"]);
+   }
+   
+   if (empty($_POST["email"])) {
+     $emailErr = "Email is required";
+   }  else {
+     $email = test_input($_POST["email"]);
+     // check if e-mail address is well-formed
+     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+       $emailErr = "Invalid email format"; 
+     }
+   }
+
+   if (empty($_POST["comment"])) {
+     $comment = "";
+   } else {
+     $comment = test_input($_POST["comment"]);
+   }
+
+}
+
+function test_input($data) {
+   $data = trim($data);
+   $data = stripslashes($data);
+   $data = htmlspecialchars($data);
+   return $data;
+}
+?>
+
+    <div class="cntr">
+    <h2>Contact Form</h2>
+
+<p><span class="error">* required field.</span></p>
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>"> 
+   <div class="field">
+    <label for="name">Name </label>
+       <br>
+    <input type="text" name="name">
+   <span class="error">*<?php echo $nameErr;?></span>
+    </div>
+    <div class="field">
+   <label for="email">Email</label>
+        <br>
+    <input type="text" name="email">
+   <span class="error">* <?php echo $emailErr;?></span>
+    </div>
+   <div class="field">
+    <label for="message">Message</label>
+       <br>
+    <textarea name="comment" rows="8" cols="40"></textarea>
+    </div>
+    <button type="submit" name="submit" value="Submit">Submit</button>
+</form>
+    </div>
+
+<?php
+$to = "ajammon1@gmail.com";
+$subject = "new contact form submission";
+ $message = "A visitor of americandisabilitysolutions has submitted the following requirements. \n\n: $name\n\nEmail: $email\n\ninquiry: $comment\n\nPlease responsd to this message within 24 hours. ";
+
+mail($to,$subject,$message);
+?>
+
     </section>
       <footer>
         <div class="container">
