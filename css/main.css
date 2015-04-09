@@ -337,7 +337,7 @@ h6 {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700; 
-    color: #fff;
+    color: black;
     background-color: ;
 }
 
@@ -378,37 +378,14 @@ fieldset[disabled] .btn-primary.active {
 
 .btn-primary .badge {
     
-    background-color: #fff;
+    background-color: red;
 }
 
-.btn-xl {
-    
-   
-    border-radius: 3px;
-    
-    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 18px;
-    font-weight: 700;
-    color: black;
 
-}
 
-.btn-xl:hover,
-.btn-xl:focus,
-.btn-xl:active,
-.btn-xl.active,
-.open .dropdown-toggle.btn-xl {
-    border-color: #f6bf01;
-    color: #fff;
-    background-color: #fec503;
 
-}
 
-.btn-xl:active,
-.btn-xl.active,
-.open .dropdown-toggle.btn-xl {
-    background-image: none;
-}
+
 
 .btn-xl.disabled,
 .btn-xl[disabled],
@@ -1163,18 +1140,38 @@ body {
     color:black;
     font-size: 20px; 
 }
+.btn-new{
+    
+    
+   
+    border-radius: 1px;
+    
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: black;
+
+
+}
 .cntr{
     align-content: center;
     float:center;
     text-align:center;
 }
 .enlrg{
-    font-size: 24px;
+    font-size: 21px;
 }
 .nav li:hover{
       background:#2B4C7E;
       
   }
+.button{
+    background:
+}
+.blackbackground{
+    
+    border: white solid;
+}
 .white{
     color:white;
 }
@@ -1326,10 +1323,7 @@ header{
 }
 
 
-.btn-xl{opacity:"0.0";
-color:rgba(250, 250, 256, 0.75);
-background-color: black;
-border-color: black;}
+
 
 #font-bomb{
   padding-bottom: 10px;
